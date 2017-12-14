@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed:400,700&subset=latin-ext');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all ease-in-out 250ms;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Saira Condensed', sans-serif;
+	overflow-x: hidden;
+}
+
+/* nav */
+
+.menu {
+	background-image: linear-gradient(-2deg, transparent 28%, #1225ce 30%, #1225ce 90%);
+	height: 17vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	padding-right: 40px;
+	z-index: 1;
+	transition: 1s linear;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #fff;
+	padding: 25px 40px;
+	transition: 1s linear;
+	opacity: .9;
+	font-size: 2.1rem;
+}
+
+.menu a:hover {
+	color: black;
+	font-weight: bold;
+}
+
+nav .fa {
+	display: none;
+}
+
+/* header */
+
+header {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	background-image: url("../img/office-1730939_1920.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	font-size: 250px;
+	color: #fff;
+	text-shadow: 2px 2px 5px blue;
+	opacity: .6;
+}
+
+header h3 {
+	position: absolute;
+	width: 100%;
+	font-family: 'Caveat', cursive;
+	font-size: 6.5rem;
+	left: 0%;
+	top: 5%;
+	transform: rotate(-20deg);
+}
+
+/* Description */
+
+.description {
+	position: relative;
+	width: 80vw;
+	min-height: 50vh;
+	font-size: 2rem;
+	text-align: center;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.description h3 {
+	width: 100%;
+	top: 50%;
+	left: -50%;
+	position: absolute;
+	font-size: 3.5rem;
+	transform: translate(-50%, -50%);
+	padding: 200px 0 60px 0;
+	transition: all 2.5s cubic-bezier(0.505, 0.020, 0.190, 0.955);
+}
+
+.laptop {
+	background: url(../img/macbook-606763_1920.jpg) fixed;
+	width: 100%;
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;
+	transition: all ease-in-out 250ms;
+}
+
+/* Service */
+
+.service {
+	background: url(../img/laptop-service.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	min-height: 70vh;
+	padding: 5px 30px;
+	font-size: 1.8rem;
+	z-index: 1;
+	background-color: hsla(0, 0%, 100%, 0.7);
+	background-blend-mode: overlay;
+}
+
+.service h2 {
+	padding: 4px;
+	transition: 0.5s linear;
+}
+
+.service h2::before {
+	content: '+';
+	padding: 0 10px;
+}
+
+.service h2:hover {
+	cursor: pointer;
+	transform: translateX(20px);
+}
+
+.service h3 {
+	display: block;
+	font-size: 4rem;
+	margin: 0 auto;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.service div {
+	padding: 0 50px;
+	display: none;
+}
+
+/* Maps */
+
+.maps {
+	display: block;
+	min-height: 70vh;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	text-align: center;
+	background-color: #cecece;
+}
+
+.maps h3 {
+	font-size: 4rem;
+	padding: 20px;
+}
+
+.maps iframe {
+	margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+	width: 100%;
+	min-height: 60vh;
+	padding: 10px 0 0 0;
+	background-color: #0971B2;
+	background-image: url(../img/apple-1867461_1920.jpg);
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+footer h3 {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 4rem;
+	padding: 30px 0 0 0;
+}
+
+.icon {
+	display: flex;
+	justify-content: space-between;
+	padding: 60px;
+	font-size: 7rem;
+	align-content: center;
+}
+
+.phone,
+.mail,
+.addres {
+	text-align: center;
+	flex-basis: 200px;
+	flex-grow: 1;
+	transition: .8s;
+}
+
+.phone .fa {
+	color: crimson;
+}
+
+.mail .fa {
+	color: dodgerblue;
+}
+
+.addres .fa {
+	color: cadetblue;
+}
+
+.icon p {
+	font-size: 2rem;
+}
+
+.icon p:last-of-type {
+	font-weight: bold;
+}
+
+.phone:hover,
+.mail:hover,
+.addres:hover {
+	transition: .8s;
+	transform: scale(1.2);
+}
+
+
+/* media queries */
+
+@media(min-width: 320px) and (max-width: 760px) {
+	.menu {
+		text-align: center;
+		padding: 0;
+		background-image: rgba(255, 255, 255, 0);
+		display: none;
+	}
+
+	.menu a {
+		padding: 10px 0;
+		background-color: #1225ce;
+		opacity: 1;
+	}
+
+	.start,
+	.about_us,
+	.service_menu,
+	.contact {
+		flex-basis: 100%;
+	}
+
+	.menu a:hover {
+		color: #fff;
+		font-weight: normal;
+	}
+
+	nav .fa {
+		display: block;
+		position: fixed;
+		font-size: 3.2rem;
+		top: 10px;
+		right: 10px;
+		z-index: 2;
+	}
+
+	nav .fa-window-close {
+		display: none;
+		right: 8px;
+	}
+
+	header h1 {
+		font-size: 10rem;
+	}
+
+	header h3 {
+		font-size: 4rem;
+		top: 80px;
+		left: 20px;
+		transform: rotate(-15deg);
+		word-wrap: break-word;
+		width: 230px;
+		text-align-last: center;
+	}
+
+	.description {
+		text-align: justify;
+		text-align-last: center;
+		padding: 30px 0;
+		height: 80vh;
+	}
+
+	.description h3 {
+		text-align: center;
+		top: 300px;
+		font-size: 2rem;
+	}
+
+	.service {
+		padding: 0px 10px;
+		background-color: hsla(0, 0%, 100%, 0.8);
+	}
+
+	.service h3 {
+		font-size: 3rem;
+		padding: 20px 0;
+	}
+
+	.service h2 {
+		font-size: 2.2rem;
+	}
+
+	.maps {
+		padding-bottom: 5px;
+	}
+
+	.maps iframe {
+		width: 100%;
+	}
+
+	footer {
+		padding: 0 0 10px 0;
+		min-height: 100vh;
+	}
+
+	footer h3 {
+		font-size: 3rem;
+	}
+
+	.icon {
+		flex-wrap: wrap;
+		padding: 0;
+		font-size: 5.5rem;
+	}
+
+
+	.icon i {
+		font-size: 4rem;
+	}
+
+	.phone,
+	.mail,
+	.addres {
+		flex-basis: 100%;
+		padding-top: 10px;
+	}
+}
+
+
+@media (min-width: 360px) and (max-width: 760px) {
+
+	header h3 {
+		font-size: 4.5rem;
+		width: 280px;
+		top: 100px;
+	}
+
+	.description {
+		height: 70vh;
+	}
+
+	.description h3 {
+		font-size: 3rem;
+	}
+
+	.service h3 {
+		font-size: 3.8rem;
+		padding: 20px 0;
+	}
+
+	.service h2 {
+		font-size: 2.6rem;
+	}
+
+	footer h3 {
+		font-size: 3.8rem;
+	}
+
+	.icon i {
+		font-size: 4.5rem;
+	}
+
+}
+
+@media (min-width: 410px) and (max-width: 760px) {
+
+	nav .fa {
+		font-size: 5rem;
+		right: 15px;
+	}
+
+	nav .fa-window-close {
+		right: 13px;
+	}
+
+	header h3 {
+		top: 130px;
+		font-size: 5rem;
+	}
+
+	.description {
+		height: 30vh;
+	}
+
+	.description h3 {
+		top: 230px;
+	}
+
+	.service {
+		min-height: 60vh;
+	}
+
+}
+
+@media (min-width: 530px) and (max-width: 736px) {
+	nav .fa {
+		font-size: 3.3rem;
+	}
+
+	header h3 {
+		font-size: 3.3rem;
+		width: 350px;
+		top: 55px;
+		left: 10px;
+	}
+
+	.description {
+		min-height: 90vh;
+		width: 90%;
+	}
+
+	.description h3 {
+		top: 160px;
+	}
+
+
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+	.menu {
+		height: 13vh;
+	}
+
+	.menu a {
+		font-size: 2.4rem;
+	}
+
+	header h3 {
+		top: 17%;
+		font-size: 5rem;
+		width: 500px;
+	}
+
+
+	.description {
+		min-height: 40vh;
+	}
+
+	.description p {
+		font-size: 2.6rem;
+	}
+
+	.description h3 {
+		font-size: 3.8rem;
+		top: 250px;
+	}
+
+	.service {
+		min-height: 45vh;
+	}
+
+	.service h3 {
+		font-size: 4.6rem;
+	}
+
+	.service h2 {
+		font-size: 3.2rem;
+	}
+
+	.service div {
+		font-size: 2.2rem;
+	}
+
+	.maps {
+		min-height: 50vh;
+	}
+
+	.maps iframe {
+		width: 100%;
+	}
+
+	footer {
+		min-height: 45vh;
+	}
+
+	.icon p {
+		font-size: 2.1rem;
+	}
+
+	.phone,
+	.mail,
+	.addres {
+		flex-basis: 220px;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+}
+
+@media (min-width: 1280px) {
+	header h3 {
+		top: 10%;
+		transform: rotate(-15deg);
+	}
+}
